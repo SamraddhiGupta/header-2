@@ -1,0 +1,168 @@
+/* Resetting some default browser styles */
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /********************feautre products ***********************************************/
+.featureProducts{
+    height: 103px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+.featureProduct_image {
+    width: 50px; /* Fixed width for all images */
+    height: 50px;
+    display: block;
+    margin: 0 auto 5px; /* Center the image above the name with 5px bottom margin */
+  }
+  
+  .featureProduct_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+.featureProduct_list a {
+    text-decoration: none; /* Remove underline from anchor tags */
+  }
+.featureProduct_name{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 550;
+    color:#474545
+}
+.featureProduct_icon_more{
+    font-size: 15px;
+    margin-left: 7px;
+}
+.featureProduct_list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.featureProduct_item a:hover .featureProduct_icon_more {
+    transform: translateY(-3px);
+  }
+  
+  .hasSubNavigation .featureProduct_name:hover {
+    color: rgb(27, 219, 219); /* Change this to your desired hover color */
+  }
+  
+  .hasSubNavigation .featureProduct_icon_more:hover {
+    color:rgb(27, 219, 219); /* Change this to your desired hover color */
+  }
+
+  .subNavigationItems {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+    z-index: 100;
+    width: 200px;
+  }
+  
+  .subNavigationItems ul {
+   color: black;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .subNavigationItems ul li:hover {
+    background-color: #f2f2f2; /* Change to your desired hover background color */
+    
+  }
+  
+  .subNavigationItems li {
+    align-items: center;
+    padding: 5px 0px;
+    transition: background-color 0.3s ease;
+  }
+ 
+  
+  .angleRightIcon {
+    margin-left: 15px;
+  }
+  .featureProduct_item {
+    position: relative;
+  }
+  
+  .hasSubNavigation {
+    cursor: pointer;
+  }
+  
+  .featureProduct_icon_more {
+    margin-left: 5px;
+  }
+  
+  /* Show subNavigationItems when expanded */
+  .featureProducts .featureProduct_item:hover .subNavigationItems,
+  .featureProducts .featureProduct_item:hover .subNavigationItems.show {
+    top: 100%;
+  }
+  
+  
+
+
+
+  @media (max-width: 767px) {
+    .featureProducts {
+      height: 150px;
+      display: flex;
+      align-items: center;
+    
+    }
+    .featureProduct_name {
+        font-size: 10px;
+        margin-top: 30px;
+        font-weight: bold;
+        text-align: center;
+        flex: 1 1 50%;
+         }
+  
+    .featureProduct_item {
+      display: none;
+      width: 50%; /* Each item takes 50% of the container width */
+      padding: 11px;
+      /* Include padding in width calculation */
+    }
+  
+    .featureProduct_icon_more {
+      display: none;
+    }
+  
+    .featureProduct_item:nth-child(2),
+    .featureProduct_item:nth-child(6),
+    .featureProduct_item:nth-child(5),
+    .featureProduct_item:nth-child(1),
+    .featureProduct_item:nth-child(3) {
+      display: block;
+    }
+  
+    .featureProduct_item img {
+        width: 130%; /* Image fills its container */
+        height: auto;
+        margin: 0 0px; 
+        margin-right: 2px;
+        margin-bottom: 20px;
+        background: linear-gradient(45deg,  #5dc789, #ddebe1);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+  }
+  
